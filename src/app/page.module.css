@@ -1,0 +1,8 @@
+.wrapper {
+  background-color: var(--background-primary-color);
+  border: 1px solid var(--border-primary-color);
+  color: var(--text-primary-color);
+  display: flex;
+  justify-content: center;
+  height: 48px;
+}

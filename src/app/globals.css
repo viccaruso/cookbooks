@@ -41,3 +41,11 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/* Global variables */
+
+:root {
+  --background-primary-color: rgb(12, 12, 16);
+  --border-primary-color: rgb(159, 159, 159);
+  --text-primary-color: rgb(240, 240, 240);
+}
