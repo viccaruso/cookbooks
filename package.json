@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "new-component": "new-component"
   },
   "dependencies": {
     "eslint": "8.49.0",
@@ -14,5 +15,8 @@
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "new-component": "^5.0.2"
   }
 }
