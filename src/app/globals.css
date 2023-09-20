@@ -10,9 +10,12 @@
 * {
   margin: 0;
 }
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
 }
 img,
 picture,
@@ -45,7 +48,17 @@ h6 {
 /* Global variables */
 
 :root {
-  --background-primary-color: rgb(12, 12, 16);
+  --background-primary-color: hsl(211, 35%, 9%);
   --border-primary-color: rgb(159, 159, 159);
   --text-primary-color: rgb(240, 240, 240);
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+}
+
+body > main {
+  flex: 1;
 }

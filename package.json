@@ -10,6 +10,8 @@
     "new-component": "new-component"
   },
   "dependencies": {
+    "@prisma/client": "^5.3.1",
+    "@vercel/postgres": "^0.4.2",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
@@ -17,6 +19,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "new-component": "^5.0.2"
+    "new-component": "^5.0.2",
+    "prisma": "^5.3.1"
   }
 }
