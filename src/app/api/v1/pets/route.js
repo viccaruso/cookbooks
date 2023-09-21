@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import cleanseBigInt from '~/utils/bigIntCleaner';
-import prisma from '~/utils/prisma';
+import cleanseBigInt from '@/utilities/bigIntCleaner';
+import prisma from '@/utilities/prisma';
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
