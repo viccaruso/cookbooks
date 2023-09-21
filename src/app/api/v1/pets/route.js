@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import prisma from '~/lib/prisma';
+import cleanseBigInt from '~/utils/bigIntCleaner';
+import prisma from '~/utils/prisma';
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
@@ -7,18 +8,14 @@ export async function GET(request) {
   const ownerId = searchParams.get('ownerId');
 
   if (!petName || !ownerId) throw new Error('Pet and owner names required');
-  const rawResult = await prisma.pets.create({
+  const result = await prisma.pets.create({
     data: {
       name: petName,
       ownerId: Number(ownerId),
     },
   });
 
-  const result = JSON.stringify(rawResult, (key, value) =>
-    typeof value === 'bigint' ? value.toString() : value
-  );
-
-  const json = await JSON.parse(result);
+  const json = await JSON.parse(cleanseBigInt(result));
 
   return NextResponse.json(json, { status: 200 });
 }
